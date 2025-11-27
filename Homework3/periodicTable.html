@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            /* border: 1px solid black; */
+            border-collapse: separate;
+            border-spacing: 1px;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        td {
+            border: 0.33px solid black;
+            /* for border on cells*/
+            padding: 1px;
+            /* like cellpadding*/
+            text-align: center;
+            line-height: 1;
+
+        }
+
+        .text {
+            font-size: 6px;
+        }
+
+        .pinkBg {
+            background-color: rgb(237, 104, 127);
+
+        }
+
+        .lightBlueBg {
+            background-color: rgb(91, 233, 255);
+        }
+
+        .greenYellowBg {
+            background-color: greenyellow;
+        }
+
+        .yellowLightBg {
+            background-color: rgb(233, 217, 148);
+        }
+
+        .yellowDarkBg {
+            background-color: rgb(150, 133, 61);
+        }
+
+        .lightGreyBg {
+            background-color: rgb(192, 182, 182);
+        }
+
+        .yellowBg {
+            background-color: rgb(242, 242, 72);
+        }
+
+        .pinkLightBg {
+            background-color: rgb(239, 185, 203);
+        }
+
+        th {
+            margin: 0px;
+            font-size: 6px;
+        }
+
+        .pinkDarBg {
+            background-color: rgb(191, 90, 167);
+        }
+
+        .babyPinkBg {
+            background-color: rgb(251, 200, 233);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Периода</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="greenYellowBg">
+                    <div class="text">1</div>
+                    <div class="text">H</div>
+                </td>
+                <td colspan="16" style="border: 0px;"></td>
+                <td class="lightBlueBg">
+                    <div class="text">2</div>
+                    <div class="text">He</div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">3</div>
+                    <div class="text">Li</div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="text">4</div>
+                    <div class="text">Be</div>
+                </td>
+                <td colspan="10" rowspan="2" style="border: 0px;"></td>
+                <td class="yellowDarkBg">
+                    <div class="text">5</div>
+                    <div class="text">B</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">6</div>
+                    <div class="text">C</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">7</div>
+                    <div class="text">N</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">8</div>
+                    <div class="text">O</div>
+                </td>
+                <td class="yellowBg">
+                    <div class="text">9</div>
+                    <div class="text">F</div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="text">10</div>
+                    <div class="text">Ne</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">11</div>
+                    <div class="text">Na</div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="text">12</div>
+                    <div class="text">Mg</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">13</div>
+                    <div class="text">Al</div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="text">14</div>
+                    <div class="text">Si</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">15</div>
+                    <div class="text">P</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">16</div>
+                    <div class="text">S</div>
+                </td>
+                <td class="yellowBg">
+                    <div class="text">17</div>
+                    <div class="text">Cl</div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="text">18</div>
+                    <div class="text">Ar</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">19</div>
+                    <div class="text">K</div>
+                </td>
+
+                <td class="yellowLightBg">
+                    <div class="text">20</div>
+                    <div class="text">Ca</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">21</div>
+                    <div class="text">Sc</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">22</div>
+                    <div class="text">Ti</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">23</div>
+                    <div class="text">V</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">24</div>
+                    <div class="text">Cr</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">25</div>
+                    <div class="text">Mn</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">26</div>
+                    <div class="text">Fe</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">27</div>
+                    <div class="text">Co</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">28</div>
+                    <div class="text">Ni</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">29</div>
+                    <div class="text">Cu</div>
+                <td class="pinkLightBg">
+                    <div class="text">30</div>
+                    <div class="text">Zn</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">31</div>
+                    <div class="text">Ga</div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="text">32</div>
+                    <div class="text">Ge</div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="text">33</div>
+                    <div class="text">As</div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="text">34</div>
+                    <div class="text">Se</div>
+                </td>
+                <td class="yellowBg">
+                    <div class="text">35</div>
+                    <div class="text">Br</div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="text">36</div>
+                    <div class="text">Kr</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">37</div>
+                    <div class="text">Rb</div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="text">38</div>
+                    <div class="text">Sr</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">39</div>
+                    <div class="text">Y</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">40</div>
+                    <div class="text">Zr</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">41</div>
+                    <div class="text">Nb</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">42</div>
+                    <div class="text">Mo</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">43</div>
+                    <div class="text">Tc</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">44</div>
+                    <div class="text">Ru</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">45</div>
+                    <div class="text">Rh</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">46</div>
+                    <div class="text">Pd</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">47</div>
+                    <div class="text">Ag</div>
+                <td class="pinkLightBg">
+                    <div class="text">48</div>
+                    <div class="text">Cd</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">49</div>
+                    <div class="text">In</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">50</div>
+                    <div class="text">Sn</div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="text">51</div>
+                    <div class="text">Sb</div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="text">52</div>
+                    <div class="text">Te</div>
+                </td>
+                <td class="yellowBg">
+                    <div class="text">53</div>
+                    <div class="text">I</div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="text">54</div>
+                    <div class="text">Xe</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">55</div>
+                    <div class="text">Cs</div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="text">56</div>
+                    <div class="text">Ba</div>
+                </td>
+
+                <td class="babyPinkBg" style="border: 0px;">
+                    <div class="text"></div>
+                    <div class="text"></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">72</div>
+                    <div class="text">Hf</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">73</div>
+                    <div class="text">Ta</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">74</div>
+                    <div class="text">W</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">75</div>
+                    <div class="text">Re</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">76</div>
+                    <div class="text">Os</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">77</div>
+                    <div class="text">Ir</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">78</div>
+                    <div class="text">Pt</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">79</div>
+                    <div class="text">Au</div>
+                <td class="pinkLightBg">
+                    <div class="text">80</div>
+                    <div class="text">Hg</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">81</div>
+                    <div class="text">Ti</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">82</div>
+                    <div class="text">Pb</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">83</div>
+                    <div class="text">Bi</div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="text">84</div>
+                    <div class="text">Po</div>
+                </td>
+                <td class="yellowBg">
+                    <div class="text">85</div>
+                    <div class="text">At</div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="text">86</div>
+                    <div class="text">Rn</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="text">87</div>
+                    <div class="text">Fr</div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="text">88</div>
+                    <div class="text">Ra</div>
+                </td>
+
+                <td class="pinkDarBg" style="border: 0px;">
+                    <div class="text"></div>
+                    <div class="text"></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">104</div>
+                    <div class="text">Rf</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">105</div>
+                    <div class="text">Db</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">106</div>
+                    <div class="text">Sg</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">107</div>
+                    <div class="text">Bh</div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="text">108</div>
+                    <div class="text">Hs</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">109</div>
+                    <div class="text">Mt</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">110</div>
+                    <div class="text">Ds</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">111</div>
+                    <div class="text">Rg</div>
+                <td class="pinkLightBg">
+                    <div class="text">112</div>
+                    <div class="text">Cn</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">113</div>
+                    <div class="text">Nh</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">114</div>
+                    <div class="text">Fl</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">115</div>
+                    <div class="text">Ms</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">116</div>
+                    <div class="text">Lv</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">117</div>
+                    <div class="text">Ts</div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="text">118</div>
+                    <div class="text">Og</div>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th>Лантаноиди</th>
+            <tr>
+                <td class="babyPinkBg">
+                    <div class="text">57</div>
+                    <div class="text">La</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">58</div>
+                    <div class="text">Ce</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">59</div>
+                    <div class="text">Pr</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">60</div>
+                    <div class="text">Nd</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">61</div>
+                    <div class="text">Pm</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">62</div>
+                    <div class="text">Sm</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">63</div>
+                    <div class="text">Eu</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">64</div>
+                    <div class="text">Gd</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">65</div>
+                    <div class="text">Tb</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">66</div>
+                    <div class="text">Dy</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">67</div>
+                    <div class="text">Ho</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">68</div>
+                    <div class="text">Er</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">69</div>
+                    <div class="text">Tm</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">70</div>
+                    <div class="text">Yb</div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="text">71</div>
+                    <div class="text">Lu</div>
+                </td>
+            </tr>
+            <th>Актионоиди</th>
+            <tr>
+                <td class="pinkDarBg">
+                    <div class="text">89</div>
+                    <div class="text">Ac</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">90</div>
+                    <div class="text">Th</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">91</div>
+                    <div class="text">Pa</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">92</div>
+                    <div class="text">U</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">93</div>
+                    <div class="text">Np</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">94</div>
+                    <div class="text">Pu</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">95</div>
+                    <div class="text">Am</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">96</div>
+                    <div class="text">Cm</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">97</div>
+                    <div class="text">Bk</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">98</div>
+                    <div class="text">Cf</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">99</div>
+                    <div class="text">Es</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">100</div>
+                    <div class="text">Fm</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">101</div>
+                    <div class="text">Md</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">102</div>
+                    <div class="text">No</div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="text">103</div>
+                    <div class="text">Lr</div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
