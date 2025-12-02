@@ -10,7 +10,7 @@
         table {
             /* border: 1px solid black; */
             border-collapse: separate;
-            border-spacing: 1px;
+            border-spacing: 5px;
             width: 100%;
             table-layout: fixed;
         }
@@ -18,7 +18,9 @@
         td {
             border: 0.33px solid black;
             /* for border on cells*/
-            padding: 1px;
+            width: 50px;
+            height: 50px;
+            /* padding: 20px; */
             /* like cellpadding*/
             text-align: center;
             line-height: 1;
@@ -26,7 +28,11 @@
         }
 
         .text {
-            font-size: 6px;
+            font-size: 20px;
+        }
+
+        .text-bold {
+            font-weight: bold;
         }
 
         .pinkBg {
@@ -64,7 +70,7 @@
 
         th {
             margin: 0px;
-            font-size: 6px;
+            font-size: 25px;
         }
 
         .pinkDarBg {
@@ -85,7 +91,7 @@
         <tbody>
             <tr>
                 <td class="greenYellowBg">
-                    <div class="text">1</div>
+                    <div class="text text-bold">1</div>
                     <div class="text">H</div>
                 </td>
                 <td colspan="16" style="border: 0px;"></td>

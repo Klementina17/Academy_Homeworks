@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            /* border: 1px solid black; */
+            border-collapse: separate;
+            border-spacing: 5px;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        td {
+            border: 0.33px solid black;
+            /* for border on cells*/
+            width: 50px;
+            height: 50px;
+            /* padding: 20px; */
+            /* like cellpadding*/
+            text-align: center;
+            line-height: 1;
+        }
+
+        .text {
+            font-size: 20px;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .atomic {
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .name {
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .pinkBg {
+            background-color: rgb(237, 104, 127);
+        }
+
+        .lightBlueBg {
+            background-color: rgb(91, 233, 255);
+        }
+
+        .greenYellowBg {
+            background-color: greenyellow;
+        }
+
+        .yellowLightBg {
+            background-color: rgb(233, 217, 148);
+        }
+
+        .yellowDarkBg {
+            background-color: rgb(150, 133, 61);
+        }
+
+        .lightGreyBg {
+            background-color: rgb(192, 182, 182);
+        }
+
+        .yellowBg {
+            background-color: rgb(242, 242, 72);
+        }
+
+        .pinkLightBg {
+            background-color: rgb(239, 185, 203);
+        }
+
+        th {
+            margin: 0px;
+            font-size: 25px;
+        }
+
+        .pinkDarBg {
+            background-color: rgb(191, 90, 167);
+        }
+
+        .babyPinkBg {
+            background-color: rgb(251, 200, 233);
+        }
+
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin: 30px 150px;
+            font-size: 13px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-box {
+            width: 100px;
+            height: 50px;
+            border: 0.33px solid #000;
+            display: inline-block;
+        }
+
+
+        /* reuse existing color classes for legend boxes */
+        .legend .pinkBg,
+        .legend .pinkLightBg,
+        .legend .lightGreyBg,
+        .legend .yellowLightBg,
+        .legend .yellowDarkBg,
+        .legend .greenYellowBg,
+        .legend .yellowBg,
+        .legend .lightBlueBg,
+        .legend .babyPinkBg,
+        .legend .pinkDarBg {
+            width: 100px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .legend-label {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>Периода</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>1</small></div>
+                    <div class="text text-bold"><b>H</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Hydrogen" target="_blank"
+                            rel="noopener">Hydrogen</a></div>
+                </td>
+                <td colspan="16" style="border: 0px;"></td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>2</small></div>
+                    <div class="text text-bold"><b>He</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Helium" target="_blank"
+                            rel="noopener">Helium</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>3</small></div>
+                    <div class="text text-bold"><b>Li</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Lithium" target="_blank"
+                            rel="noopener">Lithium</a></div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>4</small></div>
+                    <div class="text text-bold"><b>Be</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Beryllium" target="_blank"
+                            rel="noopener">Beryllium</a></div>
+                </td>
+                <td colspan="10" rowspan="2" style="border: 0px;"></td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>5</small></div>
+                    <div class="text text-bold"><b>B</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Boron" target="_blank"
+                            rel="noopener">Boron</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>6</small></div>
+                    <div class="text text-bold"><b>C</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Carbon" target="_blank"
+                            rel="noopener">Carbon</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>7</small></div>
+                    <div class="text text-bold"><b>N</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Nitrogen" target="_blank"
+                            rel="noopener">Nitrogen</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>8</small></div>
+                    <div class="text text-bold"><b>O</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Oxygen" target="_blank"
+                            rel="noopener">Oxygen</a></div>
+                </td>
+                <td class="yellowBg">
+                    <div class="atomic"><small>9</small></div>
+                    <div class="text text-bold"><b>F</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Fluorine" target="_blank"
+                            rel="noopener">Fluorine</a></div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>10</small></div>
+                    <div class="text text-bold"><b>Ne</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Neon" target="_blank"
+                            rel="noopener">Neon</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>11</small></div>
+                    <div class="text text-bold"><b>Na</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Sodium" target="_blank"
+                            rel="noopener">Sodium</a></div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>12</small></div>
+                    <div class="text text-bold"><b>Mg</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Magnesium" target="_blank"
+                            rel="noopener">Magnesium</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>13</small></div>
+                    <div class="text text-bold"><b>Al</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Aluminium" target="_blank"
+                            rel="noopener">Aluminium</a></div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>14</small></div>
+                    <div class="text text-bold"><b>Si</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Silicon" target="_blank"
+                            rel="noopener">Silicon</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>15</small></div>
+                    <div class="text text-bold"><b>P</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank"
+                            rel="noopener">Phosphorus</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>16</small></div>
+                    <div class="text text-bold"><b>S</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Sulfur" target="_blank"
+                            rel="noopener">Sulfur</a></div>
+                </td>
+                <td class="yellowBg">
+                    <div class="atomic"><small>17</small></div>
+                    <div class="text text-bold"><b>Cl</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Chlorine" target="_blank"
+                            rel="noopener">Chlorine</a></div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>18</small></div>
+                    <div class="text text-bold"><b>Ar</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Argon" target="_blank"
+                            rel="noopener">Argon</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>19</small></div>
+                    <div class="text text-bold"><b>K</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Potassium" target="_blank"
+                            rel="noopener">Potassium</a></div>
+                </td>
+
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>20</small></div>
+                    <div class="text text-bold"><b>Ca</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Calcium" target="_blank"
+                            rel="noopener">Calcium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>21</small></div>
+                    <div class="text text-bold"><b>Sc</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Scandium" target="_blank"
+                            rel="noopener">Scandium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>22</small></div>
+                    <div class="text text-bold"><b>Ti</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Titanium" target="_blank"
+                            rel="noopener">Titanium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>23</small></div>
+                    <div class="text text-bold"><b>V</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Vanadium" target="_blank"
+                            rel="noopener">Vanadium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>24</small></div>
+                    <div class="text text-bold"><b>Cr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Chromium" target="_blank"
+                            rel="noopener">Chromium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>25</small></div>
+                    <div class="text text-bold"><b>Mn</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Manganese" target="_blank"
+                            rel="noopener">Manganese</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>26</small></div>
+                    <div class="text text-bold"><b>Fe</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Iron" target="_blank"
+                            rel="noopener">Iron</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>27</small></div>
+                    <div class="text text-bold"><b>Co</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Cobalt" target="_blank"
+                            rel="noopener">Cobalt</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>28</small></div>
+                    <div class="text text-bold"><b>Ni</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Nickel" target="_blank"
+                            rel="noopener">Nickel</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>29</small></div>
+                    <div class="text text-bold"><b>Cu</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Copper" target="_blank"
+                            rel="noopener">Copper</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>30</small></div>
+                    <div class="text text-bold"><b>Zn</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Zinc" target="_blank"
+                            rel="noopener">Zinc</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>31</small></div>
+                    <div class="text text-bold"><b>Ga</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Gallium" target="_blank"
+                            rel="noopener">Gallium</a></div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>32</small></div>
+                    <div class="text text-bold"><b>Ge</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Germanium" target="_blank"
+                            rel="noopener">Germanium</a></div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>33</small></div>
+                    <div class="text text-bold"><b>As</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Arsenic" target="_blank"
+                            rel="noopener">Arsenic</a></div>
+                </td>
+                <td class="greenYellowBg">
+                    <div class="atomic"><small>34</small></div>
+                    <div class="text text-bold"><b>Se</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Selenium" target="_blank"
+                            rel="noopener">Selenium</a></div>
+                </td>
+                <td class="yellowBg">
+                    <div class="atomic"><small>35</small></div>
+                    <div class="text text-bold"><b>Br</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Bromine" target="_blank"
+                            rel="noopener">Bromine</a></div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>36</small></div>
+                    <div class="text text-bold"><b>Kr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Krypton" target="_blank"
+                            rel="noopener">Krypton</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>37</small></div>
+                    <div class="text text-bold"><b>Rb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Rubidium" target="_blank"
+                            rel="noopener">Rubidium</a></div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>38</small></div>
+                    <div class="text text-bold"><b>Sr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Strontium" target="_blank"
+                            rel="noopener">Strontium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>39</small></div>
+                    <div class="text text-bold"><b>Y</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Yttrium" target="_blank"
+                            rel="noopener">Yttrium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>40</small></div>
+                    <div class="text text-bold"><b>Zr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Zirconium" target="_blank"
+                            rel="noopener">Zirconium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>41</small></div>
+                    <div class="text text-bold"><b>Nb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Niobium" target="_blank"
+                            rel="noopener">Niobium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>42</small></div>
+                    <div class="text text-bold"><b>Mo</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Molybdenum" target="_blank"
+                            rel="noopener">Molybdenum</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>43</small></div>
+                    <div class="text text-bold"><b>Tc</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Technetium" target="_blank"
+                            rel="noopener">Technetium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>44</small></div>
+                    <div class="text text-bold"><b>Ru</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Ruthenium" target="_blank"
+                            rel="noopener">Ruthenium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>45</small></div>
+                    <div class="text text-bold"><b>Rh</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Rhodium" target="_blank"
+                            rel="noopener">Rhodium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>46</small></div>
+                    <div class="text text-bold"><b>Pd</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Palladium" target="_blank"
+                            rel="noopener">Palladium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>47</small></div>
+                    <div class="text text-bold"><b>Ag</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Silver" target="_blank"
+                            rel="noopener">Silver</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>48</small></div>
+                    <div class="text text-bold"><b>Cd</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Cadmium" target="_blank"
+                            rel="noopener">Cadmium</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>49</small></div>
+                    <div class="text text-bold"><b>In</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Indium" target="_blank"
+                            rel="noopener">Indium</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>50</small></div>
+                    <div class="text text-bold"><b>Sn</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Tin" target="_blank" rel="noopener">Tin</a>
+                    </div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>51</small></div>
+                    <div class="text text-bold"><b>Sb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Antimony" target="_blank"
+                            rel="noopener">Antimony</a></div>
+                </td>
+                <td class="yellowDarkBg">
+                    <div class="atomic"><small>52</small></div>
+                    <div class="text text-bold"><b>Te</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Tellurium" target="_blank"
+                            rel="noopener">Tellurium</a></div>
+                </td>
+                <td class="yellowBg">
+                    <div class="atomic"><small>53</small></div>
+                    <div class="text text-bold"><b>I</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Iodine" target="_blank"
+                            rel="noopener">Iodine</a></div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>54</small></div>
+                    <div class="text text-bold"><b>Xe</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Xenon" target="_blank"
+                            rel="noopener">Xenon</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>55</small></div>
+                    <div class="text text-bold"><b>Cs</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Caesium" target="_blank"
+                            rel="noopener">Caesium</a></div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>56</small></div>
+                    <div class="text text-bold"><b>Ba</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Barium" target="_blank"
+                            rel="noopener">Barium</a></div>
+                </td>
+
+                <td class="babyPinkBg" style="border: 0px;">
+                    <div class="atomic"></div>
+                    <div class="text"></div>
+                    <div class="name"></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>72</small></div>
+                    <div class="text text-bold"><b>Hf</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Hafnium" target="_blank"
+                            rel="noopener">Hafnium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>73</small></div>
+                    <div class="text text-bold"><b>Ta</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Tantalum" target="_blank"
+                            rel="noopener">Tantalum</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>74</small></div>
+                    <div class="text text-bold"><b>W</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Tungsten" target="_blank"
+                            rel="noopener">Tungsten</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>75</small></div>
+                    <div class="text text-bold"><b>Re</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Rhenium" target="_blank"
+                            rel="noopener">Rhenium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>76</small></div>
+                    <div class="text text-bold"><b>Os</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Osmium" target="_blank"
+                            rel="noopener">Osmium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>77</small></div>
+                    <div class="text text-bold"><b>Ir</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Iridium" target="_blank"
+                            rel="noopener">Iridium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>78</small></div>
+                    <div class="text text-bold"><b>Pt</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Platinum" target="_blank"
+                            rel="noopener">Platinum</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>79</small></div>
+                    <div class="text text-bold"><b>Au</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Gold" target="_blank"
+                            rel="noopener">Gold</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>80</small></div>
+                    <div class="text text-bold"><b>Hg</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Mercury_(element)" target="_blank"
+                            rel="noopener">Mercury</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>81</small></div>
+                    <div class="text text-bold"><b>Tl</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Thallium" target="_blank"
+                            rel="noopener">Thallium</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>82</small></div>
+                    <div class="text text-bold"><b>Pb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Lead" target="_blank"
+                            rel="noopener">Lead</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>83</small></div>
+                    <div class="text text-bold"><b>Bi</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Bismuth" target="_blank"
+                            rel="noopener">Bismuth</a></div>
+                </td>
+                <td class="lightGreyBg">
+                    <div class="atomic"><small>84</small></div>
+                    <div class="text text-bold"><b>Po</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Polonium" target="_blank"
+                            rel="noopener">Polonium</a></div>
+                </td>
+                <td class="yellowBg">
+                    <div class="atomic"><small>85</small></div>
+                    <div class="text text-bold"><b>At</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Astatine" target="_blank"
+                            rel="noopener">Astatine</a></div>
+                </td>
+                <td class="lightBlueBg">
+                    <div class="atomic"><small>86</small></div>
+                    <div class="text text-bold"><b>Rn</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Radon" target="_blank"
+                            rel="noopener">Radon</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="pinkBg">
+                    <div class="atomic"><small>87</small></div>
+                    <div class="text text-bold"><b>Fr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Francium" target="_blank"
+                            rel="noopener">Francium</a></div>
+                </td>
+                <td class="yellowLightBg">
+                    <div class="atomic"><small>88</small></div>
+                    <div class="text text-bold"><b>Ra</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Radium" target="_blank"
+                            rel="noopener">Radium</a></div>
+                </td>
+
+                <td class="pinkDarBg" style="border: 0px;">
+                    <div class="atomic"></div>
+                    <div class="text"></div>
+                    <div class="name"></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>104</small></div>
+                    <div class="text text-bold"><b>Rf</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Rutherfordium" target="_blank"
+                            rel="noopener">Rutherfordium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>105</small></div>
+                    <div class="text text-bold"><b>Db</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Dubnium" target="_blank"
+                            rel="noopener">Dubnium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>106</small></div>
+                    <div class="text text-bold"><b>Sg</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Seaborgium" target="_blank"
+                            rel="noopener">Seaborgium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>107</small></div>
+                    <div class="text text-bold"><b>Bh</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Bohrium" target="_blank"
+                            rel="noopener">Bohrium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>108</small></div>
+                    <div class="text text-bold"><b>Hs</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Hassium" target="_blank"
+                            rel="noopener">Hassium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>109</small></div>
+                    <div class="text text-bold"><b>Mt</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Meitnerium" target="_blank"
+                            rel="noopener">Meitnerium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>110</small></div>
+                    <div class="text text-bold"><b>Ds</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Darmstadtium" target="_blank"
+                            rel="noopener">Darmstadtium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>111</small></div>
+                    <div class="text text-bold"><b>Rg</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Roentgenium" target="_blank"
+                            rel="noopener">Roentgenium</a></div>
+                </td>
+                <td class="pinkLightBg">
+                    <div class="atomic"><small>112</small></div>
+                    <div class="text text-bold"><b>Cn</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Copernicium" target="_blank"
+                            rel="noopener">Copernicium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>113</small></div>
+                    <div class="text text-bold"><b>Nh</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Nihonium" target="_blank"
+                            rel="noopener">Nihonium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>114</small></div>
+                    <div class="text text-bold"><b>Fl</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Flerovium" target="_blank"
+                            rel="noopener">Flerovium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>115</small></div>
+                    <div class="text text-bold"><b>Mc</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Moscovium" target="_blank"
+                            rel="noopener">Moscovium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>116</small></div>
+                    <div class="text text-bold"><b>Lv</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Livermorium" target="_blank"
+                            rel="noopener">Livermorium</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>117</small></div>
+                    <div class="text text-bold"><b>Ts</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Tennessine" target="_blank"
+                            rel="noopener">Tennessine</a></div>
+                </td>
+                <td style="background-color: rgb(213, 208, 208);">
+                    <div class="atomic"><small>118</small></div>
+                    <div class="text text-bold"><b>Og</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Oganesson" target="_blank"
+                            rel="noopener">Oganesson</a></div>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th>Лантаноиди</th>
+            <tr>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>57</small></div>
+                    <div class="text text-bold"><b>La</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Lanthanum" target="_blank"
+                            rel="noopener">Lanthanum</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>58</small></div>
+                    <div class="text text-bold"><b>Ce</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Cerium" target="_blank"
+                            rel="noopener">Cerium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>59</small></div>
+                    <div class="text text-bold"><b>Pr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Praseodymium" target="_blank"
+                            rel="noopener">Praseodymium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>60</small></div>
+                    <div class="text text-bold"><b>Nd</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Neodymium" target="_blank"
+                            rel="noopener">Neodymium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>61</small></div>
+                    <div class="text text-bold"><b>Pm</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Promethium" target="_blank"
+                            rel="noopener">Promethium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>62</small></div>
+                    <div class="text text-bold"><b>Sm</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Samarium" target="_blank"
+                            rel="noopener">Samarium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>63</small></div>
+                    <div class="text text-bold"><b>Eu</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Europium" target="_blank"
+                            rel="noopener">Europium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>64</small></div>
+                    <div class="text text-bold"><b>Gd</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Gadolinium" target="_blank"
+                            rel="noopener">Gadolinium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>65</small></div>
+                    <div class="text text-bold"><b>Tb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Terbium" target="_blank"
+                            rel="noopener">Terbium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>66</small></div>
+                    <div class="text text-bold"><b>Dy</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Dysprosium" target="_blank"
+                            rel="noopener">Dysprosium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>67</small></div>
+                    <div class="text text-bold"><b>Ho</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Holmium" target="_blank"
+                            rel="noopener">Holmium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>68</small></div>
+                    <div class="text text-bold"><b>Er</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Erbium" target="_blank"
+                            rel="noopener">Erbium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>69</small></div>
+                    <div class="text text-bold"><b>Tm</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Thulium" target="_blank"
+                            rel="noopener">Thulium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>70</small></div>
+                    <div class="text text-bold"><b>Yb</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Ytterbium" target="_blank"
+                            rel="noopener">Ytterbium</a></div>
+                </td>
+                <td class="babyPinkBg">
+                    <div class="atomic"><small>71</small></div>
+                    <div class="text text-bold"><b>Lu</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Lutetium" target="_blank"
+                            rel="noopener">Lutetium</a></div>
+                </td>
+            </tr>
+            <th>Актионоиди</th>
+            <tr>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>89</small></div>
+                    <div class="text text-bold"><b>Ac</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Actinium" target="_blank"
+                            rel="noopener">Actinium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>90</small></div>
+                    <div class="text text-bold"><b>Th</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Thorium" target="_blank"
+                            rel="noopener">Thorium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>91</small></div>
+                    <div class="text text-bold"><b>Pa</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Protactinium" target="_blank"
+                            rel="noopener">Protactinium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>92</small></div>
+                    <div class="text text-bold"><b>U</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Uranium" target="_blank"
+                            rel="noopener">Uranium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>93</small></div>
+                    <div class="text text-bold"><b>Np</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Neptunium" target="_blank"
+                            rel="noopener">Neptunium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>94</small></div>
+                    <div class="text text-bold"><b>Pu</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Plutonium" target="_blank"
+                            rel="noopener">Plutonium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>95</small></div>
+                    <div class="text text-bold"><b>Am</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Americium" target="_blank"
+                            rel="noopener">Americium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>96</small></div>
+                    <div class="text text-bold"><b>Cm</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Curium" target="_blank"
+                            rel="noopener">Curium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>97</small></div>
+                    <div class="text text-bold"><b>Bk</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Berkelium" target="_blank"
+                            rel="noopener">Berkelium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>98</small></div>
+                    <div class="text text-bold"><b>Cf</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Californium" target="_blank"
+                            rel="noopener">Californium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>99</small></div>
+                    <div class="text text-bold"><b>Es</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Einsteinium" target="_blank"
+                            rel="noopener">Einsteinium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>100</small></div>
+                    <div class="text text-bold"><b>Fm</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Fermium" target="_blank"
+                            rel="noopener">Fermium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>101</small></div>
+                    <div class="text text-bold"><b>Md</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Mendelevium" target="_blank"
+                            rel="noopener">Mendelevium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>102</small></div>
+                    <div class="text text-bold"><b>No</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Nobelium" target="_blank"
+                            rel="noopener">Nobelium</a></div>
+                </td>
+                <td class="pinkDarBg">
+                    <div class="atomic"><small>103</small></div>
+                    <div class="text text-bold"><b>Lr</b></div>
+                    <div class="name"><a href="https://en.wikipedia.org/wiki/Lawrencium" target="_blank"
+                            rel="noopener">Lawrencium</a></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="legend" aria-hidden="false" role="list">
+        <div class="legend-item" role="listitem">
+            <span class="legend-box pinkBg" aria-hidden="true"></span>
+            <span class="legend-label">Alkali metals</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box yellowLightBg" aria-hidden="true"></span>
+            <span class="legend-label">Alkaline earth metals</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box pinkLightBg" aria-hidden="true"></span>
+            <span class="legend-label">Transition metals</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box lightGreyBg" aria-hidden="true"></span>
+            <span class="legend-label">Post-transition metals</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box yellowDarkBg" aria-hidden="true"></span>
+            <span class="legend-label">Metalloids</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box greenYellowBg" aria-hidden="true"></span>
+            <span class="legend-label">Nonmetals</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box yellowBg" aria-hidden="true"></span>
+            <span class="legend-label">Halogens</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box lightBlueBg" aria-hidden="true"></span>
+            <span class="legend-label">Noble gases</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box babyPinkBg" aria-hidden="true"></span>
+            <span class="legend-label">Lanthanides</span>
+        </div>
+        <div class="legend-item" role="listitem">
+            <span class="legend-box pinkDarBg" aria-hidden="true"></span>
+            <span class="legend-label">Actinides</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
