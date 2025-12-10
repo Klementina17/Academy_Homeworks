@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+</head>
+
+<body>
+    <header id="top">
+        <img src="../images/coffe-logo.jpg" alt="Coffe-Logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html"><strong>Home</strong></a></li>
+                <li><a href="./about.html"><strong>About</strong></a></li>
+                <li><a href="./contact.html"><strong>Contact</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1><em>Hot and Tasty Coffe</em></h1>
+        <hr>
+        <section class="section-divs">
+            <section class="section-form-for-contact-page">
+                <form action="post">
+                    <fieldset>
+                        <legend><strong>Personal Info:</strong></legend>
+                        <br>
+
+                        <!-- Name -->
+                        <label for="name">Name</label>
+                        <img src="https://img.icons8.com/ios-filled/50/000000/user.png" width="20"
+                            style="vertical-align:middle;">
+                        <br><br>
+                        <input type="text" name="name" id="name" placeholder="Your name..." required>
+                        <br><br>
+
+                        <!-- Surname -->
+                        <label for="surname">Surname</label>
+                        <img src="https://img.icons8.com/ios-filled/50/000000/user.png" width="20"
+                            style="vertical-align:middle;"> <br><br>
+                        <input type="text" name="surname" id="surname" placeholder="Your surname..." required>
+                        <br><br>
+
+                        <!-- Email -->
+                        <label for="email">Email</label>
+                        <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" width="20"
+                            style="vertical-align:middle;"> <br><br>
+                        <input type="email" name="email" id="email" placeholder="Your email..." required>
+                        <br><br>
+
+                        <!-- Password -->
+                        <label for="password">Password</label>
+                        <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" width="20"
+                            style="vertical-align:middle;"> <br><br>
+                        <input type="password" name="password" id="password" placeholder="Your password..." required>
+                        <br><br>
+
+                        <button type="submit">Save</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="coffee-recommendations">
+                <h2>Share Your Favorite Coffee</h2>
+
+                <form action="#" method="post">
+                    <label for="user-name">Your Name:</label><br>
+                    <input type="text" id="user-name" name="user-name" placeholder="Enter your name..."
+                        required><br><br>
+
+                    <label for="coffee-type">Type of Coffee:</label><br>
+                    <select id="coffee-type" name="coffee-type" required>
+                        <option value="">Select coffee...</option>
+                        <option>Espresso</option>
+                        <option>Latte</option>
+                        <option>Cappuccino</option>
+                        <option>Americano</option>
+                        <option>Mocha</option>
+                        <option>Matcha Latte</option>
+                    </select><br><br>
+
+                    <label for="recipe">Your Coffee Recipe or Thoughts:</label><br>
+                    <textarea id="recipe" name="recipe" rows="5"
+                        placeholder="Write your recipe or why you love this coffee..." required></textarea><br><br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </section>
+
+
+
+        <!-- FAQ SECTION -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>What is the strongest type of coffee?</summary>
+                <p>Ristretto and espresso are the strongest, while Robusta beans naturally have more caffeine.</p>
+            </details>
+
+            <details>
+                <summary>Is coffee healthy?</summary>
+                <p>Yes! In moderation, coffee can boost energy, improve focus, and provide antioxidants.</p>
+            </details>
+
+            <details>
+                <summary>What is the best way to store coffee beans?</summary>
+                <p>Keep beans in an airtight container in a cool, dark place. Avoid the fridge and freezer.</p>
+            </details>
+
+            <details>
+                <summary>How many cups of coffee can I drink per day?</summary>
+                <p>Most experts recommend 1–3 cups depending on your caffeine sensitivity.</p>
+            </details>
+        </section>
+
+
+        <a href="#top" class="back-to-top">Back to Top</a>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <p>&copy; 2025 Coffee Lovers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

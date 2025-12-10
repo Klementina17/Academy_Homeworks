@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(181, 159, 117);
+    margin: 0px auto;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    position: relative;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 7%;
+    border: 1px solid black;
+    border-radius: 40%;
+    margin-left: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 150px;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    text-decoration: underline overline;
+    color: brown;
+}
+
+main {
+    width: 100%;
+    background-color: rgb(138, 117, 78);
+    border: 1px solid rgb(138, 117, 78);
+    padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+hr {
+    width: 40%;
+}
+
+/*Sections in Index Page*/
+
+.section-aside-for-index-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 0px 50px;
+
+}
+
+.section-aside-for-index-page aside {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.section-aside-for-index-page aside ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.section-aside-for-index-page aside ul li {
+    flex: 1 1 18%;
+}
+
+.section-aside-for-index-page aside ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section-aside-for-index-page article {
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    float: right;
+    width: 50%;
+    padding: 50px;
+}
+
+.section-article-for-index-page {
+    padding: 50px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.section-article-for-index-page article p {
+    font-size: 18px;
+}
+
+.section-article-for-index-page .fun-facts {
+    margin: 0;
+}
+
+.section-article-for-index-page ol li {
+    list-style-type: circle;
+}
+
+/* Sections in Index Page*/
+
+footer {
+    text-align: center;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.back-to-top:hover {
+    background-color: brown;
+    color: white;
+}
+
+.back-to-top {
+    float: right;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+/*Sections in About Page*/
+.section-aside-for-about-page {
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.section-aside-for-about-page aside {
+    width: 100%;
+    display: flex;
+    flex: wrap;
+    gap: 15px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    padding: 25px;
+}
+
+
+.section-aside-for-about-page aside p img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section-aside-for-about-page .history-of-coffe {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+
+}
+
+.section-aside-for-about-page p::first-letter {
+    text-shadow: 1px 1px 5px white;
+}
+
+.section-methods-and-benefits-about-page {
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-methods-and-benefits-about-page ul {
+    margin: 0;
+    list-style: none;
+}
+
+.section-for-coffee-around-world-page-about {
+    width: 100%;
+    margin: 20px;
+    padding-top: 5px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+.section-for-coffee-around-world-page-about .coffe-around-the-world {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.section-for-coffee-around-world-page-about .coffe-beans {
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.section-form-for-contact-page {
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.section-form-for-contact-page form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+}
+
+.section-form-for-contact-page form input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.section-form-for-contact-page label {
+    font-size: 17px;
+
+}
+
+.section-form-for-contact-page form img {
+    color: white !important;
+}
+
+/* --- COFFEE RECOMMENDATIONS FORM --- */
+
+.coffee-recommendations {
+    width: 50%;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f8f4f0;
+    border-radius: 12px;
+    border: 1px solid #e2d6c8;
+}
+
+.coffee-recommendations h2 {
+    font-family: "Lora", serif;
+    margin-bottom: 15px;
+}
+
+.coffee-recommendations input,
+.coffee-recommendations select,
+.coffee-recommendations textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b6a79d;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #a05a2c;
+}
+
+/* --- FAQ STYLING --- */
+
+.faq {
+    margin: 50px 0;
+}
+
+.faq h2 {
+    text-align: center;
+    font-family: "Lora", serif;
+    margin-bottom: 20px;
+}
+
+.faq details {
+    margin: auto;
+    width: 80%;
+    background-color: #f5f0eb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #d8ccc0;
+    transition: 0.3s;
+}
+
+.faq summary {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.faq details:hover {
+    background-color: #eee3d9;
+}
+
+.section-divs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px 50px;
+
+}
+
+form legend {
+    font-family: "Lora", serif;
+}
+
+
+
+/*Sections in About Page*/
