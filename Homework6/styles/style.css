@@ -234,6 +234,8 @@ footer {
     width: 100%;
 }
 
+/*Sections in About Page*/
+
 .section-form-for-contact-page {
     width: 50%;
     padding: 20px 40px;
@@ -357,6 +359,173 @@ form legend {
     font-family: "Lora", serif;
 }
 
+.section-card-for-shop-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+    text-align: center;
+}
 
+.section-card-for-shop-page .card {
 
-/*Sections in About Page*/
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 20px 15px;
+    padding: 10px;
+    position: relative;
+
+}
+
+.section-card-for-shop-page .card img {
+    border-bottom: 2px solid black;
+    border-radius: 5px 5px 0 0;
+    width: 60%;
+}
+
+.section-card-for-shop-page .span-promotion {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    background: rgb(134, 18, 18);
+    border-radius: 50%;
+    padding: 10px 13px;
+    color: white;
+}
+
+.section-card-for-shop-page .americano-img-card {
+    height: 255px;
+}
+
+.section-card-for-shop-page .cappucino-img-card {
+    height: 255px;
+}
+
+.section-card-for-shop-page .card .link-order {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px 18px;
+    background-color: #8B4513;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.card .container {
+    padding-bottom: 10px;
+}
+
+.section-card-for-shop-page .card .link-order:hover {
+    background-color: #b86429;
+}
+
+.shipping-options-for-shop-page {
+    margin: 30px;
+    width: 30%;
+    height: 150px;
+    padding: 20px;
+    background-color: #f8f4f0;
+    border-radius: 10px;
+    border: 1px solid #e2d6c8;
+}
+
+.shipping-options-for-shop-page h3 {
+    font-family: 'Lora', serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.shipping-options-for-shop-page select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #b6a79d;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.order-form-for-shop-page {
+    margin: 30px auto;
+    width: 50%;
+    padding: 20px;
+    background-color: #f8f4f0;
+    border-radius: 12px;
+    border: 1px solid #e2d6c8;
+}
+
+.order-form-for-shop-page h3 {
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+}
+
+.order-form-for-shop-page input,
+.order-form-for-shop-page select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #b6a79d;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#address {
+    margin-bottom: 20px;
+}
+
+.order-form-for-shop-page .submit-order {
+    text-decoration: none;
+    width: 30%;
+    padding: 12px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.order-form-for-shop-page .submit-order:hover {
+    background-color: #b86429;
+}
+
+.container-shipping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderSuccesfull-page {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    width: 35%;
+    margin: 50px auto;
+    padding: 10px 15px;
+    background-color: #a45d2b;
+    border: 1px solid rgb(63, 60, 60);
+    border-radius: 15px;
+}
+
+.back-to-shop {
+    text-decoration: none;
+    color: black;
+    background-color: #c57a45;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+/* Only for Order Successful page */
+body.order-success-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.order-success-page main {
+    flex: 1;
+}

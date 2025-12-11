@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+</head>
+
+<body>
+    <header id="top">
+        <img src="../images/coffe-logo.jpg" alt="Coffe-Logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html"><strong>Home</strong></a></li>
+                <li><a href="./about.html"><strong>About</strong></a></li>
+                <li><a href="./contact.html"><strong>Contact</strong></a></li>
+                <li><a href="./shop.html"><strong>Shop</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1><em>Order Page</em></h1>
+        <hr>
+
+        <div class="container-shipping">
+
+            <section class="order-form-for-shop-page">
+                <h3>Place Your Order</h3>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your FullName">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email">
+
+                    <label for="coffee">Select Coffee:</label>
+                    <select id="coffee" name="coffee">
+                        <option value="espresso">Espresso</option>
+                        <option value="latte">Latte</option>
+                        <option value="americano">Americano</option>
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="matcha">Matcha</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                    <label for="address">Address:</label>
+                    <input type="address" id="address" name="address" placeholder="Your Address" required>
+
+                    <a href="./succesfullOrder.html" class="submit-order">Submit Order</a>
+                </form>
+            </section>
+
+            <section class="shipping-options-for-shop-page">
+                <h3>Shipping Options</h3>
+                <form>
+                    <label for="shipping">Choose a shipping method:</label>
+                    <select id="shipping" name="shipping">
+                        <option value="standard">Standard Shipping - 3€</option>
+                        <option value="express">Express Shipping - 7€</option>
+                        <option value="pickup">Pickup in Store - Free</option>
+                    </select>
+                </form>
+
+            </section>
+
+        </div>
+
+
+        <a href="#top" class="back-to-top">Back to Top</a>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <p>&copy; 2025 Coffee Lovers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
