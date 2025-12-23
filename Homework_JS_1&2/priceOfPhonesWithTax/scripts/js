@@ -1,0 +1,15 @@
+
+let priceOfOnePhoneWithoutTax = 119.95;
+let numberOfPhones = 30;
+let tax = priceOfOnePhoneWithoutTax * 0.05;
+console.log(tax)
+
+let sumOfAllPhonesWithoutTax = priceOfOnePhoneWithoutTax * numberOfPhones;
+console.log(`The sum of all phones without tax is ${sumOfAllPhonesWithoutTax}`)
+
+let taxOffAllPhones = sumOfAllPhonesWithoutTax * 0.05;
+console.log(`The tax of all phones is ${taxOffAllPhones}`)
+
+let sumOfAllPhoneWithTax = sumOfAllPhonesWithoutTax + taxOffAllPhones
+
+console.log(`The sum of all phones with 5% tax is ${sumOfAllPhoneWithTax}`);
