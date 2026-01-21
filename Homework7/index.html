@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 8px 12px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2>Create Dynamic Table</h2>
+
+    <div id="inputContainer">
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows">
+        <label for="cols">Columns:</label>
+        <input type="number" id="cols">
+        <button id="createBtn">Create Table</button>
+    </div>
+
+    <div id="tableContainer"></div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
