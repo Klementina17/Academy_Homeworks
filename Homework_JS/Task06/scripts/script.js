@@ -45,6 +45,7 @@ function createTable(reminders, container) {
 
         let tdTitle = document.createElement("td");
         tdTitle.textContent = reminder.title;
+        tdTitle.style.color=reminder.color;
         row.appendChild(tdTitle);
 
         let tdPriority = document.createElement("td");
